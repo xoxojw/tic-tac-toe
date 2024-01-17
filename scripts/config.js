@@ -20,7 +20,7 @@ function savePlayerConfig(e) {
   if (!enteredPlayername) { // enteredPlayername === ''
     e.target.firstElementChild.classList.add('error');
     errorsOutputElement.textContent = '이름을 입력해주세요!';
-    return; // return 반환 시 호출된 함수(여기서 savePlayerConfig)의 실행이 중단됨
+    return;
   }
 
   const updatedPlayerDataElement = document.getElementById(`player-${editedPlayer}-data`)
