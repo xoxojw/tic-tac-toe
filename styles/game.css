@@ -1,0 +1,85 @@
+@import "./styles.css";
+
+#active-game {
+  text-align: center;
+  margin: 2rem 0 5rem 0; /* top right bottom left */
+  display: none;
+}
+
+#game-over {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary-500);
+  color: #000;
+  box-shadow: 10px 10px 0 #000;
+  display: none;
+}
+
+#game-over h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  position: relative;
+  top: 0;
+  animation: bounceAnimation 0.7s infinite alternate;
+}
+
+@keyframes bounceAnimation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 0.5rem;
+  }
+}
+
+#winner-name {
+  color: var(--color-yellow)
+}
+
+#game-over p {
+  line-height: 2;
+}
+
+#active-player-statement {
+  color: #fff;
+}
+
+#active-player-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-yellow);
+}
+
+#game-board {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem); /* 6rem 6rem 6rem */
+  grid-template-rows: repeat(3, 6rem); /* 6rem 6rem 6rem */
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#game-board li {
+  background-color: var(--color-light-gray);
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#game-board li:hover {
+  background-color: var(--color-purple);
+}
+
+#game-board li.disabled {
+  background-color: var(--color-purple);
+  color: white;
+  cursor: default;
+}
